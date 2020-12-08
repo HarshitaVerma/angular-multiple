@@ -1,27 +1,291 @@
-<!-- Menu  Section -->
-<div>
-  <ul ngbNav>
-    <li class="col-2" ngbNavItem>
-      <a ngbNavLink>Home</a>
-      <ng-template ngbNavContent>Home</ng-template>
-    </li>
-    <li class="col-2" ngbNavItem>
-      <a ngbNavLink>Products</a>
-      <ng-template ngbNavContent>Products</ng-template>
-    </li>
-    <li class="col-2" ngbNavItem>
-      <a ngbNavLink>About Us</a>
-      <ng-template ngbNavContent>About Us</ng-template>
-    </li>
-    <li class="col-2" ngbNavItem>
-      <a ngbNavLink>Contact Us</a>
-      <ng-template ngbNavContent>Contact Us</ng-template>
-    </li>
-    <li class="col-2" ngbNavItem>
-      <a ngbNavLink>Cart</a>
-      <ng-template ngbNavContent>Cart</ng-template>
-    </li>
-  </ul>
+<nav id="navbar" class="navbar navbar-default active">
+  <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" aria-expanded="false" (click)="showMenu()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="router-link-active">
+        <!-- <img src="../../assets/images/mashup-icon.svg" class="navbar-logo-img" alt="" /> -->
+        <p class="navbar-logo-img">H@r$H!T@</p>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right text-right ">
+        <li><a href="home#id_home">Home</a></li>
+        <li><a href="about#id_about">About Me</a></li>
+        <li><a href="skills#id_skills">Tech Skills</a></li>
+        <li><a href="experience#id_experience">Experience</a></li>
+        <li><a href="project#id_project">Projects</a></li>
+        <li><a href="contact#id_contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <router-outlet></router-outlet> -->
+<!--Home-->
+
+<div id="id_home" class="hero-full-container background-image-container white-text-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 font-Main">
+        <p>Hello, I am <span class="hightlight">Harshita Verma</span><span class="wave">👋</span></p>
+        <p>Front-end / UI Developer</p>
+        <br />
+        <!-- <a href="./experience.html" class="btn btn-default btn-lg" title="">View my work</a> &nbsp; -->
+        <a href="./assets/images/Harshita's Resume.pdf" class="btn btn-default btn-lg" title="" download="HarshitaVerma">Resume</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--About-->
+<div id="id_about" class="section-container">
+  <div class="container text-center">
+    <div class="row section-container-spacer">
+      <div class="col-xs-12 ">
+        <h2>ABOUT ME</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <img src="./assets/images/profil-01.jpg" alt="" class="reveal img-responsive reveal-content image-center" />
+      </div>
+      <div class="col-xs-12 col-md-6 text-left">
+        <h3>Harshita Verma</h3>
+        <h4>Software Developer</h4>
+        <p>
+          I have been a professinal software developer for more than 4 years.My expertise are in Angular, HTML,CSS ,JavaScript and TypeScript. I have worked from Angular
+          4 to Angular 9 versions. I completed my B.tech in CSE in the year 2016 and started my first job with a campus placement @ 3rd Eye Advisory Services Pvt Limited
+          Lucknow,UP. After that I got an opportunity to work with Siemens Services Private Limited Bangalore,Karnataka as a Software Developer.
+        </p>
+        <p>
+          <a href="./assets/images/Harshita's Resume.pdf" class="resumeBtn btn btn-default btn-lg " title="">
+            Resume
+          </a>
+          <a href="https://www.linkedin.com/in/harshitavermaangular/" class="btn btn-default btn-lg linkedinBtn" title="">
+            LinkedIn
+          </a>
+          <a href="https://github.com/HarshitaVerma" class="btn btn-default btn-lg githubBtn" title="">
+            Github
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- Footer Section -->
+<!-- SkillS-->
+<div id="id_skills" class="background-image-container section-container">
+  <div class="container  text-center">
+    <div class="row section-container-spacer">
+      <div class="col-xs-12 ">
+        <h2>TECH SKILLS</h2>
+      </div>
+
+      <div class="row text-left">
+        <div class="col-xs-12  col-md-4">
+          <div class="col-xs-4" class="card card-shadow ">
+            <h3>Web Technologies</h3>
+            <p class="faded-partition"></p>
+            <p><img width="65px" height="65px" src="../assets/images/html.png" /> HTML</p>
+            <p><img width="65px" height="65px" src="../assets/images/css3.png" /> CSS</p>
+            <p><img width="65px" height="65px" src="../assets/images/sass.png" /> SASS</p>
+            <p><img width="65px" height="65px" src="../assets/images/json.png" /> JSON</p>
+          </div>
+        </div>
+        <div class="col-xs-12  col-md-4 ">
+          <div class="col-xs-4" class="card card-shadow card-division">
+            <h3>Languages</h3>
+            <p class="faded-partition"></p>
+            <p><img width="65px" height="65px" src="../assets/images/js.png" /> JavaScript</p>
+            <p><img width="65px" height="65px" src="../assets/images/typescript.png" /> TypeScript</p>
+          </div>
+          <div class="col-xs-4" class="card card-shadow ">
+            <h3>Framework</h3>
+            <p class="faded-partition"></p>
+            <p><img width="65px" height="65px" src="../assets/images/angular.png" /> Angular 4+</p>
+          </div>
+        </div>
+        <div class="col-xs-12  col-md-4">
+          <div class="col-xs-4" class="card card-shadow card-division">
+            <h3>Version Control</h3>
+            <p class="faded-partition"></p>
+            <p><img width="65px" height="65px" src="../assets/images/TFS1.png" /> TFS</p>
+          </div>
+          <div class="col-xs-4" class="card card-shadow card-division">
+            <h3>IDE</h3>
+            <p class="faded-partition"></p>
+            <p><img width="65px" height="65px" src="../assets/images/notepad.png" /> Notepad++</p>
+            <p><img width="65px" height="65px" src="../assets/images/vsc.png" /> Visual Studio Code</p>
+          </div>
+          <div class="col-xs-4" class="card card-shadow ">
+            <h3>Others</h3>
+            <p class="faded-partition"></p>
+            <p><img width="65px" height="65px" src="../assets/images/aggrid.png" /> Ag-grid</p>
+            <p><img width="65px" height="65px" src="../assets/images/angular.png" /> angular-flex-layout</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Experience-->
+<div id="id_experience" class=" section-container section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="section-container-spacer">
+          <h2 class="text-center">EXPERIENCE</h2>
+        </div>
+        <div class="card-container">
+          <div class=" text-center card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
+            <p><img src="../assets/images/siemens.png" /></p>
+            <p style="margin-top:-33px">Software Developer</p>
+            <p class="text-justify">
+              Working as a UI developer on NMS product<br />
+              Involved in leading knowledge building exercises, creating new features and product maintenance<br />
+              Focused on enhancing product and domain knowledge which helped a lot in maintaining code quality<br />
+              Involved in UI and backend integration <br />
+              Worked extensively in Agile development process
+            </p>
+
+            <p><img src="../assets/images/thirdeye.png" /></p>
+            <p style="margin-top:-43px">IT- Executive</p>
+            <p style="text-align: justify;">
+              Worked on development of android and web application
+              <br />
+              Interacted with end users for understanding the requirement and providing better user experience <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Project-->
+<div id="id_project" class=" background-image-container section-container">
+  <div class="container text-center">
+    <div class="row section-container-spacer">
+      <div class="col-xs-12 col-md-12">
+        <h2>PROJECTS</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 card-division ">
+        <div class="col-xs-6" class="card card-shadow  flip-card">
+          <div class=" flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Network Management System- SINEC NMS</h3>
+              <p class="faded-partition"></p>
+              <div style="background-image: url(../assets/images/sinec.jpg); opacity: 0.7; height: 250px;"></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Overview</h3>
+              <p class="faded-partition"></p>
+              <p style="color: black;">
+                A new generation network management system which helps to monitor and configure up to 50,000 networking devices As a UI developer, I worked on many key
+                features like Operation Management, Reports , Jobs and Certificate Management Involved in bug fixing and releasing monthly builds
+              </p>
+              <h3>Environment:</h3>
+              <p class="faded-partition"></p>
+              <p>HTML5, CSS3, TypeScript, JavaScript, SCSS, Angular 8, Ag-grid, JSON, Agile Scrum, VS Code , TFS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-6 card-division">
+        <div class="col-xs-6" class="card card-shadow  flip-card">
+          <div class=" flip-card-inner">
+            <div class="flip-card-front">
+              <h3>E-commerce Website - MobiKart</h3>
+              <p class="faded-partition"></p>
+              <div style="background-image: url(../assets/images/mobikart.png); opacity: 0.7; height: 250px;"></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Overview</h3>
+              <p class="faded-partition"></p>
+              <p style="color: black;">
+                MobiKart is an ecommerce Angular UI application especially for selling mobile phones. Main purpose of the application to provide understanding of angular
+                topics Topics Covered: Modules, Components, Services, Directives, Component Interaction, Routing, Reactive Forms, Pipes, Angular Material, Snack bar,
+                Authentication using Local Storage
+              </p>
+              <h3>Environment:</h3>
+              <p class="faded-partition"></p>
+              <p>Angular 9, HTML5, SCSS, TypeScript, JavaScript, angular-flex-layout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!--Card 1-->
+      <div class="col-xs-12 col-md-6 card-division">
+        <div class="col-xs-6" class="card card-shadow flip-card">
+          <div class=" flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Help the needy- Human First</h3>
+              <p class="faded-partition"></p>
+              <div style="background-image: url(../assets/images/humanfirst.png); opacity: 0.7; height: 250px;"></div>
+            </div>
+
+            <div class="flip-card-back">
+              <h3>Overview</h3>
+              <p class="faded-partition"></p>
+              <p style="color: black;">
+                Revamped web application related to charity
+              </p>
+              <h3>Environment:</h3>
+              <p class="faded-partition"></p>
+              <p>HTML5 CSS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Card 2-->
+      <div class="col-xs-12 col-md-6 ">
+        <div class="col-xs-6"></div>
+      </div>
+    </div>
+  </div>
+  <div id="id_contact" class=" contact-container section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="section-container-spacer">
+            <h2 class="text-center">CONTACT ME</h2>
+          </div>
+          <div class="card-container">
+            <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
+              <p>
+                <a href="https://www.gmail.com/" class="resumeBtn btn btn-default btn-lg " title="">
+                  Gmail
+                </a>
+                <a href="./assets/images/Harshita's Resume.pdf" download="HarshitaVerma" class="resumeBtn btn btn-default btn-lg " title="">
+                  Resume
+                </a>
+                <a href="https://www.linkedin.com/in/harshitavermaangular/" class="btn btn-default btn-lg linkedinBtn" title="">
+                  LinkedIn
+                </a>
+                <a href="https://github.com/HarshitaVerma" class="btn btn-default btn-lg githubBtn" title="">
+                  Github
+                </a>
+                <a href="https://www.facebook.com/" class="linkedinBtn btn btn-default btn-lg " title="">
+                  Facebook
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Contact-->
