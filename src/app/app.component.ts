@@ -1,8 +1,11 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  host: {
+    '(document:click)': 'onClick($event)'
+  }
 })
 export class AppComponent implements OnInit {
   title = 'Portfolio';
@@ -241,18 +244,10 @@ export class AppComponent implements OnInit {
     document.getElementById('navbar-collapse').style.display = 'block';
   }
   // called When we click on menu dropdown
-  @HostListener('window:click') clickFunct() {
-    document.getElementById('navbar-collapse').classList.add('collapse');
+  onClick(event) {
+    if (event.target.id !== 'menubtn') {
+      document.getElementById('navbar-collapse').classList.add('collapse');
+      document.getElementById('navbar-collapse').style.display = 'none';
+    }
   }
-
-  // @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-  //   var navbar = document.getElementById('navbar');
-  //   var sticky = navbar.offsetTop;
-
-  //   if (window.pageYOffset >= sticky) {
-  //     navbar.classList.add('sticky');
-  //   } else {
-  //     navbar.classList.remove('sticky');
-  //   }
-  // }
 }
